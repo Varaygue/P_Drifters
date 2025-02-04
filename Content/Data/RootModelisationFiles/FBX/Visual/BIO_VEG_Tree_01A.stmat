@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated using SpeedTree tools -->
+<Materials Count="1" Mesh="BIO_VEG_Tree_01A.fbx" FlipOpacity="0">
+	<Material ID="0" Name="Default_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="BIO_VEG_Tree_01A.png" Source="" />
+		<Map Name="Opacity" File="BIO_VEG_Tree_01A_Opacity.png" Source="" />
+		<Map Name="Normal" File="BIO_VEG_Tree_01A_Normal.png" Source="" />
+		<Map Name="Gloss" File="BIO_VEG_Tree_01A_Gloss.png" Source="" />
+		<Map Name="Specular" File="BIO_VEG_Tree_01A_Specular.png" Source="" />
+		<Map Name="Metallic" File="BIO_VEG_Tree_01A_Metallic.png" Source="" />
+		<Map Name="SubsurfaceColor" File="BIO_VEG_Tree_01A_SubsurfaceColor.png" Source="" />
+		<Map Name="SubsurfaceAmount" File="BIO_VEG_Tree_01A_SubsurfaceAmount.png" Source="" />
+		<Map Name="AO" File="BIO_VEG_Tree_01A_AO.png" Source="" />
+		<Map Name="Height" File="BIO_VEG_Tree_01A_Height.png" Source="" />
+		<Map Name="Custom" File="BIO_VEG_Tree_01A_Custom.png" Source="" />
+		<Map Name="Custom2" File="BIO_VEG_Tree_01A_Custom2.png" Source="" />
+	</Material>
+</Materials>
