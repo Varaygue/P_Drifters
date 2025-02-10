@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated using SpeedTree tools -->
+<Materials Count="2" Mesh="BIO_VEG_Tree_Small_01A.fbx" FlipOpacity="0">
+	<Material ID="1" Name="Bark_Mat" TwoSided="0" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Bark.png" Source="E:/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Broadleaf/Bark/Sample_Bark_2.png" />
+		<Map Name="Normal" File="Bark_Normal.png" Source="E:/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Broadleaf/Bark/Sample_Bark_2_Normal.png" />
+		<Map Name="Gloss" File="Bark_Gloss.png" Source="E:/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Broadleaf/Bark/Sample_Bark_2_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="AO" File="Bark_AO.png" Source="E:/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Broadleaf/Bark/Sample_Bark_2_AO.png" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="2" Name="Leaf_Branche_Mat" TwoSided="1" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Leaf_Branche.png" Source="E:/Capture d’écran 2025-02-10 220628.png" />
+		<Map Name="Opacity" File="Leaf_Branche_Opacity.png" Source="E:/Opa_Branche.png" />
+		<Map Name="Gloss" Value="0.25" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="Height" Value="0.5" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+</Materials>
