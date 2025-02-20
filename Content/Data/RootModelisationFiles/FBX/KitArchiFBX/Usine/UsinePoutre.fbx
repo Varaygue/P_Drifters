@@ -8,11 +8,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2025
 		Month: 2
-		Day: 11
-		Hour: 3
-		Minute: 51
-		Second: 2
-		Millisecond: 590
+		Day: 18
+		Hour: 5
+		Minute: 40
+		Second: 11
+		Millisecond: 3
 	}
 	Creator: "FBX SDK/FBX Plugins version 2020.3.4"
 	OtherFlags:  {
@@ -37,15 +37,15 @@ FBXHeaderExtension:  {
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
 			P: "Original|ApplicationVersion", "KString", "", "", "2024"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "11/02/2025 02:51:02.590"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "18/02/2025 04:40:11.003"
 			P: "Original|FileName", "KString", "", "", "C:\Users\jerem\Documents\GitHub\P_Drifters\Content\Data\RootModelisationFiles\FBX\KitArchiFBX\Usine\UsinePoutre.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2024"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "11/02/2025 02:51:02.590"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "18/02/2025 04:40:11.003"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\jerem\Documents\3ds Max 2024"
-			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\jerem\Documents\3ds Max 2024\autoback\AutoBackup10.max"
+			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\jerem\Desktop\Drifter\usine.max"
 		}
 	}
 }
@@ -80,7 +80,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 1624494591440, "", "Scene" {
+	Document: 2884969049872, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -238,12 +238,12 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 1624438055008, "Geometry::", "Mesh" {
+	Geometry: 2884239510560, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.101960784313725,0.694117647058824,0.101960784313725
 		}
 		Vertices: *48 {
-			a: -25.5033855438232,-26.5550746917725,252.66845703125,25.5033855438232,-26.5550746917725,252.66845703125,-25.5033855438232,26.5550746917725,252.66845703125,25.5033855438232,26.5550746917725,252.66845703125,25.5033874511719,-26.5550785064697,6.70626640319824,-25.5033874511719,-26.5550785064697,6.70626640319824,25.5033874511719,26.5550785064697,6.70626640319824,-25.5033874511719,26.5550785064697,6.70626640319824,-26.5116767883301,27.5633659362793,-2.86770699631234e-07,-26.5116767883301,-27.5633659362793,-2.86770699631234e-07,26.5116767883301,-27.5633659362793,-2.86770699631234e-07,26.5116767883301,27.5633659362793,-2.86770699631234e-07,26.5116767883301,-27.5633697509766,6.70626592636108,-26.5116767883301,-27.5633697509766,6.70626592636108,-26.5116767883301,27.5633697509766,6.70626592636108,26.5116767883301,27.5633697509766,6.70626592636108
+			a: -25.503381729126,-26.5550727844238,224.7939453125,25.503381729126,-26.5550727844238,224.7939453125,-25.503381729126,26.5550727844238,224.7939453125,25.503381729126,26.5550727844238,224.7939453125,25.5033874511719,-26.5550785064697,6.70626640319824,-25.5033874511719,-26.5550785064697,6.70626640319824,25.5033874511719,26.5550785064697,6.70626640319824,-25.5033874511719,26.5550785064697,6.70626640319824,-26.5116767883301,27.5633659362793,-2.86770699631234e-07,-26.5116767883301,-27.5633659362793,-2.86770699631234e-07,26.5116767883301,-27.5633659362793,-2.86770699631234e-07,26.5116767883301,27.5633659362793,-2.86770699631234e-07,26.5116767883301,-27.5633697509766,6.70626592636108,-26.5116767883301,-27.5633697509766,6.70626592636108,-26.5116767883301,27.5633697509766,6.70626592636108,26.5116767883301,27.5633697509766,6.70626592636108
 		} 
 		PolygonVertexIndex: *52 {
 			a: 0,1,3,-3,10,12,13,-10,11,15,12,-11,8,14,15,-12,9,13,14,-9,1,0,5,-5,3,1,4,-7,2,3,6,-8,0,2,7,-6,4,5,13,-13,5,7,14,-14,7,6,15,-15,6,4,12,-16
@@ -301,7 +301,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 1624450715792, "Model::UsinePoutre", "Mesh" {
+	Model: 2882833874736, "Model::UsinePoutre", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
@@ -316,7 +316,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 1624492002080, "Material::01 - MurExt", "" {
+	Material: 2884962289616, "Material::01 - MurExt", "" {
 		Version: 102
 		ShadingModel: "unknown"
 		MultiLayer: 0
@@ -451,7 +451,7 @@ Objects:  {
 			P: "3dsMax|Parameters|displacement_map_amt", "Float", "", "A",1
 		}
 	}
-	Implementation: 1623607069568, "Implementation::01 - MurExt_Implementation", "" {
+	Implementation: 2884239944096, "Implementation::01 - MurExt_Implementation", "" {
 		Version: 100
 		Properties70:  {
 			P: "ShaderLanguage", "KString", "", "", "StandardSSL"
@@ -460,7 +460,7 @@ Objects:  {
 			P: "RootBindingName", "KString", "", "", "root"
 		}
 	}
-	BindingTable: 1623607534704, "BindingTable::root 4", "" {
+	BindingTable: 2884239930480, "BindingTable::root 6", "" {
 		Version: 100
 		Properties70:  {
 			P: "TargetName", "KString", "", "", "root"
@@ -588,17 +588,17 @@ Objects:  {
 Connections:  {
 	
 	;Model::UsinePoutre, Model::RootNode
-	C: "OO",1624450715792,0
+	C: "OO",2882833874736,0
 	
 	;Geometry::, Model::UsinePoutre
-	C: "OO",1624438055008,1624450715792
+	C: "OO",2884239510560,2882833874736
 	
 	;Material::01 - MurExt, Model::UsinePoutre
-	C: "OO",1624492002080,1624450715792
+	C: "OO",2884962289616,2882833874736
 	
 	;Material::01 - MurExt, Implementation::01 - MurExt_Implementation
-	C: "OO",1624492002080,1623607069568
+	C: "OO",2884962289616,2884239944096
 	
-	;BindingTable::root 4, Implementation::01 - MurExt_Implementation
-	C: "OO",1623607534704,1623607069568
+	;BindingTable::root 6, Implementation::01 - MurExt_Implementation
+	C: "OO",2884239930480,2884239944096
 }

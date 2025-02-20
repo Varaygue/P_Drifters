@@ -8,11 +8,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2025
 		Month: 2
-		Day: 11
-		Hour: 3
-		Minute: 50
-		Second: 18
-		Millisecond: 271
+		Day: 18
+		Hour: 5
+		Minute: 13
+		Second: 57
+		Millisecond: 753
 	}
 	Creator: "FBX SDK/FBX Plugins version 2020.3.4"
 	OtherFlags:  {
@@ -37,15 +37,15 @@ FBXHeaderExtension:  {
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
 			P: "Original|ApplicationVersion", "KString", "", "", "2024"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "11/02/2025 02:50:18.271"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "18/02/2025 04:13:57.753"
 			P: "Original|FileName", "KString", "", "", "C:\Users\jerem\Documents\GitHub\P_Drifters\Content\Data\RootModelisationFiles\FBX\KitArchiFBX\Usine\Sol_Etage_Usine.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2024"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "11/02/2025 02:50:18.271"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "18/02/2025 04:13:57.753"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\jerem\Documents\3ds Max 2024"
-			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\jerem\Documents\3ds Max 2024\autoback\AutoBackup10.max"
+			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\jerem\Desktop\Drifter\usine.max"
 		}
 	}
 }
@@ -80,7 +80,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 1622088670608, "", "Scene" {
+	Document: 2884970447456, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -238,7 +238,7 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 1624438061248, "Geometry::", "Mesh" {
+	Geometry: 2884239514400, "Geometry::", "Mesh" {
 		Properties70:  {
 			P: "Color", "ColorRGB", "Color", "",0.525490196078431,0.231372549019608,0.0274509803921569
 		}
@@ -301,24 +301,24 @@ Objects:  {
 			}
 		}
 	}
-	Model: 1624448848544, "Model::Sol_Etage_Usine", "Mesh" {
+	Model: 2884962940752, "Model::SolCentre_Etage_Usine", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
 			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
-			P: "GeometricTranslation", "Vector3D", "Vector", "",118.110237121582,7.87401866912842,-1.09672546386719e-05
+			P: "GeometricTranslation", "Vector3D", "Vector", "",118.110237121582,-7.87405872344971,-8.40156735648634e-06
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000093346676,-0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000093346676,-0,179.999994991044
 			P: "Lcl Scaling", "Lcl Scaling", "", "A",2.54,2.54,2.54
 			P: "UDP3DSMAX", "KString", "", "U", "MapChannel:1 = UVChannel_1&cr;&lf;"
-			P: "MaxHandle", "int", "Integer", "UH",35
+			P: "MaxHandle", "int", "Integer", "UH",159
 		}
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 1624495582608, "Material::01 - MurExt", "" {
+	Material: 2882842328592, "Material::01 - MurExt", "" {
 		Version: 102
 		ShadingModel: "unknown"
 		MultiLayer: 0
@@ -453,7 +453,7 @@ Objects:  {
 			P: "3dsMax|Parameters|displacement_map_amt", "Float", "", "A",1
 		}
 	}
-	Implementation: 1624445545216, "Implementation::01 - MurExt_Implementation", "" {
+	Implementation: 2883947241984, "Implementation::01 - MurExt_Implementation", "" {
 		Version: 100
 		Properties70:  {
 			P: "ShaderLanguage", "KString", "", "", "StandardSSL"
@@ -462,7 +462,7 @@ Objects:  {
 			P: "RootBindingName", "KString", "", "", "root"
 		}
 	}
-	BindingTable: 1624460272688, "BindingTable::root 2", "" {
+	BindingTable: 2884203815840, "BindingTable::root 2", "" {
 		Version: 100
 		Properties70:  {
 			P: "TargetName", "KString", "", "", "root"
@@ -589,18 +589,18 @@ Objects:  {
 
 Connections:  {
 	
-	;Model::Sol_Etage_Usine, Model::RootNode
-	C: "OO",1624448848544,0
+	;Model::SolCentre_Etage_Usine, Model::RootNode
+	C: "OO",2884962940752,0
 	
-	;Geometry::, Model::Sol_Etage_Usine
-	C: "OO",1624438061248,1624448848544
+	;Geometry::, Model::SolCentre_Etage_Usine
+	C: "OO",2884239514400,2884962940752
 	
-	;Material::01 - MurExt, Model::Sol_Etage_Usine
-	C: "OO",1624495582608,1624448848544
+	;Material::01 - MurExt, Model::SolCentre_Etage_Usine
+	C: "OO",2882842328592,2884962940752
 	
 	;Material::01 - MurExt, Implementation::01 - MurExt_Implementation
-	C: "OO",1624495582608,1624445545216
+	C: "OO",2882842328592,2883947241984
 	
 	;BindingTable::root 2, Implementation::01 - MurExt_Implementation
-	C: "OO",1624460272688,1624445545216
+	C: "OO",2884203815840,2883947241984
 }
