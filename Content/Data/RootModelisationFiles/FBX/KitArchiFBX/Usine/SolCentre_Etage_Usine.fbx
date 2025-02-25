@@ -8,11 +8,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2025
 		Month: 2
-		Day: 18
-		Hour: 5
-		Minute: 19
-		Second: 28
-		Millisecond: 839
+		Day: 25
+		Hour: 14
+		Minute: 59
+		Second: 3
+		Millisecond: 768
 	}
 	Creator: "FBX SDK/FBX Plugins version 2020.3.4"
 	OtherFlags:  {
@@ -37,13 +37,13 @@ FBXHeaderExtension:  {
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
 			P: "Original|ApplicationVersion", "KString", "", "", "2024"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "18/02/2025 04:19:28.839"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "25/02/2025 13:59:03.768"
 			P: "Original|FileName", "KString", "", "", "C:\Users\jerem\Documents\GitHub\P_Drifters\Content\Data\RootModelisationFiles\FBX\KitArchiFBX\Usine\SolCentre_Etage_Usine.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2024"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "18/02/2025 04:19:28.839"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "25/02/2025 13:59:03.768"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\jerem\Documents\3ds Max 2024"
 			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\jerem\Desktop\Drifter\usine.max"
 		}
@@ -80,7 +80,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 2883946962832, "", "Scene" {
+	Document: 1800713770624, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -100,7 +100,7 @@ References:  {
 
 Definitions:  {
 	Version: 100
-	Count: 6
+	Count: 7
 	ObjectType: "GlobalSettings" {
 		Count: 1
 	}
@@ -232,15 +232,26 @@ Definitions:  {
 			}
 		}
 	}
+	ObjectType: "CollectionExclusive" {
+		Count: 1
+		PropertyTemplate: "FbxDisplayLayer" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "Show", "bool", "", "",1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+			}
+		}
+	}
 }
 
 ; Object properties
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 2884239522080, "Geometry::", "Mesh" {
+	Geometry: 1800641839264, "Geometry::", "Mesh" {
 		Properties70:  {
-			P: "Color", "ColorRGB", "Color", "",0.525490196078431,0.231372549019608,0.0274509803921569
+			P: "Color", "ColorRGB", "Color", "",0.52156862745098,0.231372549019608,0.0274509803921569
 		}
 		Vertices: *24 {
 			a: -118.110237121582,-7.87401580810547,0,118.110237121582,-7.87401580810547,0,-118.110237121582,7.87401580810547,0,118.110237121582,7.87401580810547,0,-118.110237121582,-7.87401580810547,236.220474243164,118.110237121582,-7.87401580810547,236.220474243164,-118.110237121582,7.87401580810547,236.220474243164,118.110237121582,7.87401580810547,236.220474243164
@@ -270,7 +281,7 @@ Objects:  {
 			MappingInformationType: "ByPolygonVertex"
 			ReferenceInformationType: "IndexToDirect"
 			UV: *48 {
-				a: 1,0,0,0,1,1,0,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1
+				a: 1,0,0,0,1,0.0666666105389595,0,0.0666666105389595,0,0,1,0,0,0.0666666105389595,1,0.0666666105389595,5.55111512312578e-17,8.21219572344489e-08,0.99999988079071,-2.96132313655209e-17,8.21219572344489e-08,1,0.999999940395355,0.999999940395355,0,0,0.0666666105389595,0,0,1,0.0666666105389595,1,9.23872036651119e-08,-8.64321270210842e-18,1,8.21219572344489e-08,0,0.999999940395355,0.999999940395355,1,0,0,0.0666666105389595,0,0,1,0.0666666105389595,1
 			} 
 			UVIndex: *24 {
 				a: 0,2,3,1,4,5,7,6,8,9,11,10,12,13,15,14,16,17,19,18,20,21,23,22
@@ -301,7 +312,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 2884962940752, "Model::SolCentre_Etage_Usine", "Mesh" {
+	Model: 1800677932112, "Model::SolCentre_Etage_Usine", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
@@ -310,15 +321,15 @@ Objects:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
 			P: "GeometricTranslation", "Vector3D", "Vector", "",118.110237121582,-7.87405872344971,-8.40156735648634e-06
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000093346676,-0,179.999994991044
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000093346676,-0,-179.999967670286
 			P: "Lcl Scaling", "Lcl Scaling", "", "A",2.54,2.54,2.54
 			P: "UDP3DSMAX", "KString", "", "U", "MapChannel:1 = UVChannel_1&cr;&lf;"
-			P: "MaxHandle", "int", "Integer", "UH",159
+			P: "MaxHandle", "int", "Integer", "UH",324
 		}
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 2883980437504, "Material::01 - MurExt", "" {
+	Material: 1800605067360, "Material::01 - MurExt", "" {
 		Version: 102
 		ShadingModel: "unknown"
 		MultiLayer: 0
@@ -370,7 +381,7 @@ Objects:  {
 			P: "3dsMax|Parameters|sss_color", "ColorAndAlpha", "", "A",1,1,1,1
 			P: "3dsMax|Parameters|sss_depth", "Float", "", "A",10
 			P: "3dsMax|Parameters|sss_scale", "Float", "", "A",1
-			P: "3dsMax|Parameters|sss_scatter_color", "ColorAndAlpha", "", "A",10000,5000,2500,1
+			P: "3dsMax|Parameters|sss_scatter_color", "ColorAndAlpha", "", "A",1000000,500000,250000,1
 			P: "3dsMax|Parameters|emission", "Float", "", "A",1
 			P: "3dsMax|Parameters|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
 			P: "3dsMax|Parameters|emit_luminance", "Float", "", "A",1500
@@ -453,7 +464,7 @@ Objects:  {
 			P: "3dsMax|Parameters|displacement_map_amt", "Float", "", "A",1
 		}
 	}
-	Implementation: 2884239459104, "Implementation::01 - MurExt_Implementation", "" {
+	Implementation: 1800403464976, "Implementation::01 - MurExt_Implementation", "" {
 		Version: 100
 		Properties70:  {
 			P: "ShaderLanguage", "KString", "", "", "StandardSSL"
@@ -462,7 +473,7 @@ Objects:  {
 			P: "RootBindingName", "KString", "", "", "root"
 		}
 	}
-	BindingTable: 2884975983360, "BindingTable::root 4", "" {
+	BindingTable: 1800677750608, "BindingTable::root 13", "" {
 		Version: 100
 		Properties70:  {
 			P: "TargetName", "KString", "", "", "root"
@@ -582,6 +593,11 @@ Objects:  {
 		Entry: "3dsMax|Parameters|cutout_map_on", "FbxPropertyEntry", "cutout_map_on", "FbxSemanticEntry"
 		Entry: "3dsMax|Parameters|displacement_map_amt", "FbxPropertyEntry", "displacement_map_amt", "FbxSemanticEntry"
 	}
+	CollectionExclusive: 1800410206496, "DisplayLayer::Mur_UsineEtageVitre", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.694117647058824,0.105882352941176,0.345098039215686
+		}
+	}
 }
 
 ; Object connections
@@ -590,17 +606,17 @@ Objects:  {
 Connections:  {
 	
 	;Model::SolCentre_Etage_Usine, Model::RootNode
-	C: "OO",2884962940752,0
+	C: "OO",1800677932112,0
 	
 	;Geometry::, Model::SolCentre_Etage_Usine
-	C: "OO",2884239522080,2884962940752
+	C: "OO",1800641839264,1800677932112
 	
 	;Material::01 - MurExt, Model::SolCentre_Etage_Usine
-	C: "OO",2883980437504,2884962940752
+	C: "OO",1800605067360,1800677932112
 	
 	;Material::01 - MurExt, Implementation::01 - MurExt_Implementation
-	C: "OO",2883980437504,2884239459104
+	C: "OO",1800605067360,1800403464976
 	
-	;BindingTable::root 4, Implementation::01 - MurExt_Implementation
-	C: "OO",2884975983360,2884239459104
+	;BindingTable::root 13, Implementation::01 - MurExt_Implementation
+	C: "OO",1800677750608,1800403464976
 }
