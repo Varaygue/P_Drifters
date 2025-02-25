@@ -8,11 +8,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2025
 		Month: 2
-		Day: 18
-		Hour: 5
-		Minute: 13
-		Second: 57
-		Millisecond: 753
+		Day: 25
+		Hour: 16
+		Minute: 24
+		Second: 13
+		Millisecond: 360
 	}
 	Creator: "FBX SDK/FBX Plugins version 2020.3.4"
 	OtherFlags:  {
@@ -37,13 +37,13 @@ FBXHeaderExtension:  {
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
 			P: "Original|ApplicationVersion", "KString", "", "", "2024"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "18/02/2025 04:13:57.753"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "25/02/2025 15:24:13.360"
 			P: "Original|FileName", "KString", "", "", "C:\Users\jerem\Documents\GitHub\P_Drifters\Content\Data\RootModelisationFiles\FBX\KitArchiFBX\Usine\Sol_Etage_Usine.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2024"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "18/02/2025 04:13:57.753"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "25/02/2025 15:24:13.360"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\jerem\Documents\3ds Max 2024"
 			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\jerem\Desktop\Drifter\usine.max"
 		}
@@ -80,7 +80,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 2884970447456, "", "Scene" {
+	Document: 1800713771392, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -100,7 +100,7 @@ References:  {
 
 Definitions:  {
 	Version: 100
-	Count: 6
+	Count: 7
 	ObjectType: "GlobalSettings" {
 		Count: 1
 	}
@@ -232,18 +232,29 @@ Definitions:  {
 			}
 		}
 	}
+	ObjectType: "CollectionExclusive" {
+		Count: 1
+		PropertyTemplate: "FbxDisplayLayer" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "Show", "bool", "", "",1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+			}
+		}
+	}
 }
 
 ; Object properties
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 2884239514400, "Geometry::", "Mesh" {
+	Geometry: 1800617686384, "Geometry::", "Mesh" {
 		Properties70:  {
-			P: "Color", "ColorRGB", "Color", "",0.525490196078431,0.231372549019608,0.0274509803921569
+			P: "Color", "ColorRGB", "Color", "",0.52156862745098,0.231372549019608,0.0274509803921569
 		}
 		Vertices: *24 {
-			a: -118.110237121582,-7.87401580810547,0,118.110237121582,-7.87401580810547,0,-118.110237121582,7.87401580810547,0,118.110237121582,7.87401580810547,0,-118.110237121582,-7.87401580810547,236.220474243164,118.110237121582,-7.87401580810547,236.220474243164,-118.110237121582,7.87401580810547,236.220474243164,118.110237121582,7.87401580810547,236.220474243164
+			a: -118.110237121582,-7.87401580810547,0,118.110237121582,-7.87401580810547,0,-118.110237121582,7.87401580810547,0,118.110237121582,7.87401580810547,0,-118.110237121582,-7.87374353408813,220.472244262695,118.110237121582,-7.87374353408813,220.472244262695,-118.110237121582,7.8742880821228,220.472244262695,118.110237121582,7.8742880821228,220.472244262695
 		} 
 		PolygonVertexIndex: *24 {
 			a: 0,2,3,-2,4,5,7,-7,0,1,5,-5,1,3,7,-6,3,2,6,-8,2,0,4,-7
@@ -269,11 +280,11 @@ Objects:  {
 			Name: "UVChannel_1"
 			MappingInformationType: "ByPolygonVertex"
 			ReferenceInformationType: "IndexToDirect"
-			UV: *48 {
-				a: 1,0,0,0,1,1,0,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1
+			UV: *44 {
+				a: 1,1.11855122497673e-07,1,0.0666666626930237,0,0.0666665509343147,0,1.9611840209979e-18,0,0,1,0,1,0.0666666626930237,0,0.0666666626930237,0.933332681655884,6.29184881972833e-08,0.933332562446594,1,0,1,1.11855094075963e-07,-9.24585232496985e-17,0.874998867511749,-2.4166657313443e-17,0.874998867511749,0.0625001564621925,2.09728199251913e-07,0.0625007078051567,2.09728199251913e-07,1.15350508167467e-06,0.87499874830246,1,0,1,1,1.1984484444838e-06,1,0.0714296847581863,0,0.0714284852147102,0,4.77188335826837e-18
 			} 
 			UVIndex: *24 {
-				a: 0,2,3,1,4,5,7,6,8,9,11,10,12,13,15,14,16,17,19,18,20,21,23,22
+				a: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,13,16,17,14,18,19,20,21
 			} 
 		}
 		LayerElementMaterial: 0 {
@@ -301,7 +312,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 2884962940752, "Model::SolCentre_Etage_Usine", "Mesh" {
+	Model: 1801200667696, "Model::Sol_Etage_Usine", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
@@ -310,15 +321,15 @@ Objects:  {
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
 			P: "GeometricTranslation", "Vector3D", "Vector", "",118.110237121582,-7.87405872344971,-8.40156735648634e-06
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000093346676,-0,179.999994991044
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000093346676,-0,90.0000298252351
 			P: "Lcl Scaling", "Lcl Scaling", "", "A",2.54,2.54,2.54
 			P: "UDP3DSMAX", "KString", "", "U", "MapChannel:1 = UVChannel_1&cr;&lf;"
-			P: "MaxHandle", "int", "Integer", "UH",159
+			P: "MaxHandle", "int", "Integer", "UH",322
 		}
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 2882842328592, "Material::01 - MurExt", "" {
+	Material: 1801251777920, "Material::01 - MurExt", "" {
 		Version: 102
 		ShadingModel: "unknown"
 		MultiLayer: 0
@@ -370,7 +381,7 @@ Objects:  {
 			P: "3dsMax|Parameters|sss_color", "ColorAndAlpha", "", "A",1,1,1,1
 			P: "3dsMax|Parameters|sss_depth", "Float", "", "A",10
 			P: "3dsMax|Parameters|sss_scale", "Float", "", "A",1
-			P: "3dsMax|Parameters|sss_scatter_color", "ColorAndAlpha", "", "A",10000,5000,2500,1
+			P: "3dsMax|Parameters|sss_scatter_color", "ColorAndAlpha", "", "A",1000000,500000,250000,1
 			P: "3dsMax|Parameters|emission", "Float", "", "A",1
 			P: "3dsMax|Parameters|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
 			P: "3dsMax|Parameters|emit_luminance", "Float", "", "A",1500
@@ -453,7 +464,7 @@ Objects:  {
 			P: "3dsMax|Parameters|displacement_map_amt", "Float", "", "A",1
 		}
 	}
-	Implementation: 2883947241984, "Implementation::01 - MurExt_Implementation", "" {
+	Implementation: 1801225789520, "Implementation::01 - MurExt_Implementation", "" {
 		Version: 100
 		Properties70:  {
 			P: "ShaderLanguage", "KString", "", "", "StandardSSL"
@@ -462,7 +473,7 @@ Objects:  {
 			P: "RootBindingName", "KString", "", "", "root"
 		}
 	}
-	BindingTable: 2884203815840, "BindingTable::root 2", "" {
+	BindingTable: 1800677800432, "BindingTable::root 38", "" {
 		Version: 100
 		Properties70:  {
 			P: "TargetName", "KString", "", "", "root"
@@ -582,6 +593,11 @@ Objects:  {
 		Entry: "3dsMax|Parameters|cutout_map_on", "FbxPropertyEntry", "cutout_map_on", "FbxSemanticEntry"
 		Entry: "3dsMax|Parameters|displacement_map_amt", "FbxPropertyEntry", "displacement_map_amt", "FbxSemanticEntry"
 	}
+	CollectionExclusive: 1800581115824, "DisplayLayer::Mur_UsineEtageVitre", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.694117647058824,0.105882352941176,0.345098039215686
+		}
+	}
 }
 
 ; Object connections
@@ -589,18 +605,18 @@ Objects:  {
 
 Connections:  {
 	
-	;Model::SolCentre_Etage_Usine, Model::RootNode
-	C: "OO",2884962940752,0
+	;Model::Sol_Etage_Usine, Model::RootNode
+	C: "OO",1801200667696,0
 	
-	;Geometry::, Model::SolCentre_Etage_Usine
-	C: "OO",2884239514400,2884962940752
+	;Geometry::, Model::Sol_Etage_Usine
+	C: "OO",1800617686384,1801200667696
 	
-	;Material::01 - MurExt, Model::SolCentre_Etage_Usine
-	C: "OO",2882842328592,2884962940752
+	;Material::01 - MurExt, Model::Sol_Etage_Usine
+	C: "OO",1801251777920,1801200667696
 	
 	;Material::01 - MurExt, Implementation::01 - MurExt_Implementation
-	C: "OO",2882842328592,2883947241984
+	C: "OO",1801251777920,1801225789520
 	
-	;BindingTable::root 2, Implementation::01 - MurExt_Implementation
-	C: "OO",2884203815840,2883947241984
+	;BindingTable::root 38, Implementation::01 - MurExt_Implementation
+	C: "OO",1800677800432,1801225789520
 }

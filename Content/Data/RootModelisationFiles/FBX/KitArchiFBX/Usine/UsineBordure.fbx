@@ -8,11 +8,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2025
 		Month: 2
-		Day: 11
-		Hour: 3
-		Minute: 46
-		Second: 49
-		Millisecond: 651
+		Day: 25
+		Hour: 14
+		Minute: 44
+		Second: 3
+		Millisecond: 625
 	}
 	Creator: "FBX SDK/FBX Plugins version 2020.3.4"
 	OtherFlags:  {
@@ -37,15 +37,15 @@ FBXHeaderExtension:  {
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
 			P: "Original|ApplicationVersion", "KString", "", "", "2024"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "11/02/2025 02:46:49.649"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "25/02/2025 13:44:03.624"
 			P: "Original|FileName", "KString", "", "", "C:\Users\jerem\Documents\GitHub\P_Drifters\Content\Data\RootModelisationFiles\FBX\KitArchiFBX\Usine\UsineBordure.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2024"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "11/02/2025 02:46:49.649"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "25/02/2025 13:44:03.624"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\jerem\Documents\3ds Max 2024"
-			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\jerem\Documents\3ds Max 2024\autoback\AutoBackup10.max"
+			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\jerem\Desktop\Drifter\usine.max"
 		}
 	}
 }
@@ -80,7 +80,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 1622250936656, "", "Scene" {
+	Document: 1800780892672, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -100,7 +100,7 @@ References:  {
 
 Definitions:  {
 	Version: 100
-	Count: 3
+	Count: 4
 	ObjectType: "GlobalSettings" {
 		Count: 1
 	}
@@ -195,15 +195,26 @@ Definitions:  {
 			}
 		}
 	}
+	ObjectType: "CollectionExclusive" {
+		Count: 1
+		PropertyTemplate: "FbxDisplayLayer" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "Show", "bool", "", "",1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+			}
+		}
+	}
 }
 
 ; Object properties
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 1624438065568, "Geometry::", "Mesh" {
+	Geometry: 1799645299616, "Geometry::", "Mesh" {
 		Properties70:  {
-			P: "Color", "ColorRGB", "Color", "",0.87843137254902,0.337254901960784,0.337254901960784
+			P: "Color", "ColorRGB", "Color", "",0.87843137254902,0.333333333333333,0.333333333333333
 		}
 		Vertices: *48 {
 			a: -284.503692626953,-12.3412475585938,0,-280.164947509766,-12.3411254882812,-0.0001220703125,-280.840972900391,-12.3412475585938,387.572509765625,-280.164947509766,-12.3411254882812,387.572387695312,-280.164947509766,-12.3411254882812,231.49870300293,-284.706298828125,-12.3412475585938,231.498825073242,-287.513305664062,-12.3412475585938,0,-287.513305664062,-12.3412475585938,231.498825073242,-284.503692626953,40.3668823242188,0,-280.164947509766,40.3667602539062,-0.0001220703125,-280.840972900391,40.3668823242188,387.572509765625,-280.164947509766,40.3667602539062,387.572387695312,-280.164947509766,40.3667602539062,231.49870300293,-284.706298828125,40.3668823242188,231.498825073242,-287.513305664062,40.3668823242188,0,-287.513305664062,40.3668823242188,231.498825073242
@@ -212,7 +223,7 @@ Objects:  {
 			a: 1,4,5,-1,3,2,5,-5,0,5,7,-7,13,15,7,-6,8,9,1,-1,2,3,11,-11,13,12,9,-9,7,15,14,-7,13,10,11,-13,13,5,2,-11,0,6,14,-9,8,14,15,-14
 		} 
 		Edges: *27 {
-			a: 18,20,21,0,5,7,8,1,15,31,40,9,43,17,16,22,23,25,24,47,30,29,28,34,32,42,46
+			a: 0,1,2,3,4,5,7,9,10,11,12,13,15,16,17,19,21,22,23,24,25,27,29,30,32,34,42
 		} 
 		GeometryVersion: 124
 		LayerElementNormal: 0 {
@@ -232,11 +243,11 @@ Objects:  {
 			Name: "UVChannel_1"
 			MappingInformationType: "ByPolygonVertex"
 			ReferenceInformationType: "IndexToDirect"
-			UV: *96 {
-				a: 1,0,0,0,1,1,0,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,1,0.5,0,0.5,1,0.5,0,0.5,0,0,1,0,1,0.5,0,0.5,1,0,1,1,0,1,0,0,0,0,1,0,1,1,0,1,0,0,1,0,1,0.5,0,0.5,0,0,1,0,1,0.5,0,0.5,1,1,0,1,1,0.5,1,1,0,1,0,0.5,0,0,1,0
+			UV: *52 {
+				a: 0.0191285312175751,0.0107806026935577,0.0145641267299652,0,0.150773733854294,0.599443972110748,0.0184483528137207,0.599443972110748,0.150458723306656,0.998319029808044,0.166465014219284,0.991271555423737,0.0187884867191315,0.018258661031723,0.150433868169785,0.018258661031723,0.164045661687851,0.0182583034038544,0.16922202706337,0.59944361448288,0.157820850610733,0.599443972110748,0.158329635858536,0.018258661031723,0.0114012360572815,0.599443972110748,0,0.59944361448288,0.0184483528137207,0.606491029262543,0.167524844408035,0.99127185344696,0.150773733854294,0.606491029262543,0.0108927488327026,0.018258661031723,0.150093823671341,0.0107806026935577,0.00169709324836731,0.99127185344696,0.016794353723526,1,0.0187631845474243,0.998319029808044,0.0051766037940979,0.0182583034038544,0.152427583932877,1,0.154658287763596,0,0.00275686383247375,0.991271555423737
 			} 
 			UVIndex: *48 {
-				a: 9,16,17,8,11,10,17,16,13,18,22,21,42,38,22,18,24,27,1,0,4,5,29,28,35,34,33,32,22,38,37,21,35,41,40,34,42,18,15,43,13,21,37,47,47,37,38,42
+				a: 8,9,10,11,5,15,10,9,11,10,2,7,14,3,2,16,0,1,24,18,4,23,20,21,12,13,22,17,2,3,6,7,12,19,25,13,14,16,4,21,18,7,6,0,17,6,3,12
 			} 
 		}
 		Layer: 0 {
@@ -251,7 +262,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 1624461641712, "Model::UsineBordure", "Mesh" {
+	Model: 1800637630752, "Model::UsineBordure", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
@@ -261,10 +272,16 @@ Objects:  {
 			P: "GeometricTranslation", "Vector3D", "Vector", "",280.164794921875,-14.0128173828125,0
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
 			P: "Lcl Scaling", "Lcl Scaling", "", "A",2.54,2.54,2.54
-			P: "MaxHandle", "int", "Integer", "UH",24
+			P: "UDP3DSMAX", "KString", "", "U", "MapChannel:1 = UVChannel_1&cr;&lf;"
+			P: "MaxHandle", "int", "Integer", "UH",332
 		}
 		Shading: T
 		Culling: "CullingOff"
+	}
+	CollectionExclusive: 1800705056144, "DisplayLayer::Mur_UsineEtageVitre", "DisplayLayer" {
+		Properties70:  {
+			P: "Color", "ColorRGB", "Color", "",0.694117647058824,0.105882352941176,0.345098039215686
+		}
 	}
 }
 
@@ -274,8 +291,8 @@ Objects:  {
 Connections:  {
 	
 	;Model::UsineBordure, Model::RootNode
-	C: "OO",1624461641712,0
+	C: "OO",1800637630752,0
 	
 	;Geometry::, Model::UsineBordure
-	C: "OO",1624438065568,1624461641712
+	C: "OO",1799645299616,1800637630752
 }
