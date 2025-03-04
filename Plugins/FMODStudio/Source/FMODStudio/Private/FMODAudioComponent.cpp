@@ -1,4 +1,4 @@
-// Copyright (c), Firelight Technologies Pty, Ltd. 2012-2024.
+// Copyright (c), Firelight Technologies Pty, Ltd. 2012-2025.
 
 #include "FMODAudioComponent.h"
 #include "FMODStudioModule.h"
@@ -44,6 +44,8 @@ UFMODAudioComponent::UFMODAudioComponent(const FObjectInitializer &ObjectInitial
     , NeedDestroyProgrammerSoundCallback(false)
     , EventLength(0)
     , bPlayEnded(false)
+    , Velocity(ForceInit)
+    , LastLocation(ForceInit)
 {
     bAutoActivate = true;
     bNeverNeedsRenderUpdate = true;
@@ -161,7 +163,7 @@ void UFMODAudioComponent::OnUpdateTransform(EUpdateTransformFlags UpdateTransfor
         attr.position = FMODUtils::ConvertWorldVector(GetComponentTransform().GetLocation());
         attr.up = FMODUtils::ConvertUnitVector(GetComponentTransform().GetUnitAxis(EAxis::Z));
         attr.forward = FMODUtils::ConvertUnitVector(GetComponentTransform().GetUnitAxis(EAxis::X));
-        attr.velocity = FMODUtils::ConvertWorldVector(GetOwner()->GetVelocity());
+        attr.velocity = FMODUtils::ConvertWorldVector(Velocity);
 
         StudioInstance->set3DAttributes(&attr);
 
@@ -186,7 +188,7 @@ void UFMODAudioComponent::UpdateInteriorVolumes()
 
     FInteriorSettings *Ambient =
         (FInteriorSettings *)alloca(sizeof(FInteriorSettings)); // FinteriorSetting::FInteriorSettings() isn't exposed (possible UE4 bug???)
-    const FVector &Location = GetOwner()->GetTransform().GetTranslation();
+    const FVector &Location = GetComponentLocation();
     AAudioVolume *AudioVolume = GetWorld()->GetAudioSettings(Location, NULL, Ambient);
 
     const FFMODListener &Listener = GetStudioModule().GetNearestListener(Location);
@@ -276,7 +278,7 @@ void UFMODAudioComponent::UpdateAttenuation()
         static FName NAME_SoundOcclusion = FName(TEXT("SoundOcclusion"));
         FCollisionQueryParams Params(NAME_SoundOcclusion, OcclusionDetails.bUseComplexCollisionForOcclusion, GetOwner());
 
-        const FVector &Location = GetOwner()->GetTransform().GetTranslation();
+        const FVector &Location = GetComponentLocation();
         const FFMODListener &Listener = GetStudioModule().GetNearestListener(Location);
 
         bool bIsOccluded = GWorld->LineTraceTestByChannel(Location, Listener.Transform.GetLocation(), OcclusionDetails.OcclusionTraceChannel, Params);
@@ -427,6 +429,16 @@ void UFMODAudioComponent::TickComponent(float DeltaTime, enum ELevelTick TickTyp
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+    if (DeltaTime > 0.f)
+    {
+        FVector pos = GetComponentTransform().GetTranslation();
+        if (LastLocation != FVector::ZeroVector)
+        {
+            Velocity = (pos - LastLocation) / DeltaTime;
+        }
+        LastLocation = pos;
+    }
+
     if (IsActive())
     {
         FMOD_STUDIO_PLAYBACK_STATE state = FMOD_STUDIO_PLAYBACK_STOPPED;
@@ -520,7 +532,7 @@ void UFMODAudioComponent::Deactivate()
     Super::Deactivate();
 }
 
-FMOD_RESULT F_CALLBACK UFMODAudioComponent_EventCallback(FMOD_STUDIO_EVENT_CALLBACK_TYPE type, FMOD_STUDIO_EVENTINSTANCE *event, void *parameters)
+FMOD_RESULT F_CALL UFMODAudioComponent_EventCallback(FMOD_STUDIO_EVENT_CALLBACK_TYPE type, FMOD_STUDIO_EVENTINSTANCE *event, void *parameters)
 {
     UFMODAudioComponent *Component = nullptr;
     FMOD::Studio::EventInstance *Instance = (FMOD::Studio::EventInstance *)event;
@@ -560,7 +572,7 @@ void UFMODAudioComponent_ReleaseProgrammerSound(FMOD_STUDIO_PROGRAMMER_SOUND_PRO
     }
 }
 
-FMOD_RESULT F_CALLBACK UFMODAudioComponent_EventCallbackDestroyProgrammerSound(FMOD_STUDIO_EVENT_CALLBACK_TYPE type, FMOD_STUDIO_EVENTINSTANCE *event, void *parameters)
+FMOD_RESULT F_CALL UFMODAudioComponent_EventCallbackDestroyProgrammerSound(FMOD_STUDIO_EVENT_CALLBACK_TYPE type, FMOD_STUDIO_EVENTINSTANCE *event, void *parameters)
 {
     UFMODAudioComponent_ReleaseProgrammerSound((FMOD_STUDIO_PROGRAMMER_SOUND_PROPERTIES *)parameters);
     return FMOD_OK;
