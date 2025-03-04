@@ -1,11 +1,10 @@
-// Copyright (c), Firelight Technologies Pty, Ltd. 2012-2025.
+// Copyright (c), Firelight Technologies Pty, Ltd. 2012-2024.
 
 #include "FMODSettings.h"
 #include "Misc/Paths.h"
 
 #if WITH_EDITOR
 #include "Settings/ProjectPackagingSettings.h"
-#include <ObjectTools.h>
 #endif
 
 #ifdef FMOD_PLATFORM_HEADER
@@ -192,48 +191,32 @@ UFMODSettings::EProblem UFMODSettings::Check() const
 void UFMODSettings::PostEditChangeProperty(FPropertyChangedEvent& e)
 {
     FName PropertyName = (e.Property != NULL) ? e.Property->GetFName() : NAME_None;
-    // Validate ContentBrowserPrefix, as Unreal can crash if the prefix is improperly configured 
     if (PropertyName == GET_MEMBER_NAME_CHECKED(UFMODSettings, ContentBrowserPrefix))
     {
         FStrProperty* prop = CastField<FStrProperty>(e.Property);
         void* propertyAddress = e.Property->ContainerPtrToValuePtr<void>(this);
         FString contentBrowserPrefix = prop->GetPropertyValue(propertyAddress);
 
-        // Check for empty prefix
-        if (contentBrowserPrefix.IsEmpty()) {
+        bool isEmpty = contentBrowserPrefix.IsEmpty();
+        bool startsWithSlash = contentBrowserPrefix.StartsWith("/");
+        bool endsWithSlash = contentBrowserPrefix.EndsWith("/");
+
+        if (isEmpty) {
             contentBrowserPrefix = "/";
         }
         else {
-
-            // FName's max length is 1023, but FMOD needs to append additional directories
-            // 512 is an arbitary length that should cover most prefix lengths
-            const int ContentBrowserPrefixMaxLength = 512;
-
-            // Ensure that length doesn't exceed max prefix length
-            if (contentBrowserPrefix.Len() > ContentBrowserPrefixMaxLength) {
-                contentBrowserPrefix.LeftChopInline(ContentBrowserPrefixMaxLength);
-            }
-
-            // Remove invalid long package characters
-            contentBrowserPrefix = ObjectTools::SanitizeInvalidChars(contentBrowserPrefix, INVALID_LONGPACKAGE_CHARACTERS);
-
-            // Remove double slashes
-            int32 index = contentBrowserPrefix.Find(FString("//"));
-            while (index != INDEX_NONE) {
-                contentBrowserPrefix.RemoveAt(index);
-                index = contentBrowserPrefix.Find(FString("//"));
-            }
-
-            // Check for starting and ending with slash
-            if (!contentBrowserPrefix.StartsWith("/")) {
+            if (!startsWithSlash) {
                 contentBrowserPrefix = "/" + contentBrowserPrefix;
             }
-            if (!contentBrowserPrefix.EndsWith("/")) {
+
+            if (!endsWithSlash) {
                 contentBrowserPrefix += "/";
             }
         }
 
-        prop->SetPropertyValue(propertyAddress, contentBrowserPrefix);
+        if (isEmpty || !endsWithSlash || !startsWithSlash) {
+            prop->SetPropertyValue(propertyAddress, contentBrowserPrefix);
+        }
 
     }
     Super::PostEditChangeProperty(e);
