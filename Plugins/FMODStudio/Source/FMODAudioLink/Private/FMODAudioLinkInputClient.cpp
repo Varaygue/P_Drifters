@@ -1,4 +1,4 @@
-// Copyright (c), Firelight Technologies Pty, Ltd. 2025-2025.
+// Copyright (c), Firelight Technologies Pty, Ltd. 2024-2024.
 
 #include "FMODAudioLinkInputClient.h"
 #include "FMODAudioLinkLog.h"
@@ -70,7 +70,7 @@ void FFMODAudioLinkInputClient::Register(const FName& NameOfProducingSource)
             return;
         }
         UE_CLOG(UNLIKELY(AudioDevice->GetMaxChannels() == 0), LogFMODAudioLink, Warning,
-            TEXT("FMODAudioLink: The current AudioDevice %d has 0 MaxChannels. Consider setting AudioMaxChannels to a sensible value in the Engine config file's TargetSettings for your platform."),
+            TEXT("FMODAudioLink: The current AudioDevice %" PRIu32 " has 0 MaxChannels. Consider setting AudioMaxChannels to a sensible value in the Engine config file's TargetSettings for your platform."),
             AudioDevice->DeviceID);
 
         UE_CLOG(!FFMODAudioLinkFactory::bHasSubmix,
@@ -98,7 +98,7 @@ FFMODAudioLinkInputClient::~FFMODAudioLinkInputClient()
     Unregister();
 }
 
-FMOD_RESULT F_CALL pcmreadcallback(FMOD_SOUND* inSound, void* data, unsigned int datalen)
+FMOD_RESULT F_CALLBACK pcmreadcallback(FMOD_SOUND* inSound, void* data, unsigned int datalen)
 {
     FMOD::Sound* sound = (FMOD::Sound*)inSound;
     FFMODAudioLinkInputClient* ConsumerSP;
@@ -109,7 +109,7 @@ FMOD_RESULT F_CALL pcmreadcallback(FMOD_SOUND* inSound, void* data, unsigned int
     return FMOD_OK;
 }
 
-FMOD_RESULT F_CALL SoundCallback(FMOD_STUDIO_EVENT_CALLBACK_TYPE type, FMOD_STUDIO_EVENTINSTANCE* event, void* parameters)
+FMOD_RESULT F_CALLBACK SoundCallback(FMOD_STUDIO_EVENT_CALLBACK_TYPE type, FMOD_STUDIO_EVENTINSTANCE* event, void* parameters)
 {
     FMOD_RESULT result = FMOD_OK;
     FMOD::Studio::EventInstance* eventInstance = (FMOD::Studio::EventInstance*)event;
@@ -144,7 +144,7 @@ FMOD_RESULT F_CALL SoundCallback(FMOD_STUDIO_EVENT_CALLBACK_TYPE type, FMOD_STUD
         // Pass the sound to FMOD
         FMOD_STUDIO_PROGRAMMER_SOUND_PROPERTIES* props = (FMOD_STUDIO_PROGRAMMER_SOUND_PROPERTIES*)parameters;
         props->sound = (FMOD_SOUND*)sound;
-        UE_LOG(LogFMODAudioLink, Verbose, TEXT("Sound Created: %s , Consumer = %p."), *sourceName, ConsumerPtr);
+        UE_LOG(LogFMODAudioLink, Verbose, TEXT("Sound Created: %s , Consumer = %" PRIu64 "."), *sourceName, ConsumerPtr);
     }
     else if (type == FMOD_STUDIO_EVENT_CALLBACK_DESTROY_PROGRAMMER_SOUND)
     {
@@ -153,7 +153,7 @@ FMOD_RESULT F_CALL SoundCallback(FMOD_STUDIO_EVENT_CALLBACK_TYPE type, FMOD_STUD
         FMOD::Sound* sound = (FMOD::Sound*)props->sound;
 
         // Release the sound
-        UE_LOG(LogFMODAudioLink, Verbose, TEXT("Sound Release: %p."), sound);
+        UE_LOG(LogFMODAudioLink, Verbose, TEXT("Sound Release: %" PRIu64 "."), sound);
         result = sound->release();
     }
     else if (type == FMOD_STUDIO_EVENT_CALLBACK_DESTROYED)
@@ -161,7 +161,7 @@ FMOD_RESULT F_CALL SoundCallback(FMOD_STUDIO_EVENT_CALLBACK_TYPE type, FMOD_STUD
         InputClientRef* ClientRef = nullptr;
         result = eventInstance->getUserData((void**)&ClientRef);
 
-        UE_LOG(LogFMODAudioLink, Verbose, TEXT("Event Destroyed: ClientRef = %p."), ClientRef);
+        UE_LOG(LogFMODAudioLink, Verbose, TEXT("Event Destroyed: ClientRef = %" PRIu64 "."), ClientRef);
         if (ClientRef)
         {
             delete ClientRef;
@@ -182,7 +182,7 @@ void FFMODAudioLinkInputClient::Start(USceneComponent* InComponent)
     auto SelfSP = AsShared();
     auto PlayLambda = [SelfSP, LinkEvent, InComponent]()
         {
-            UE_LOG(LogFMODAudioLink, Verbose, TEXT("FFMODAudioLinkInputClient::Start: SelfSP = %p, LinkEvent = %s, InComponent = %p.")
+            UE_LOG(LogFMODAudioLink, Verbose, TEXT("FFMODAudioLinkInputClient::Start: SelSP = %" PRIu64 ", LinkEvent = %s, InComponent = %" PRIu64 ".")
                     , &SelfSP, *LinkEvent.Get()->GetName(), &InComponent);
 
             FMOD::Studio::EventDescription* EventDesc = IFMODStudioModule::Get().GetEventDescription(LinkEvent.Get());
@@ -203,20 +203,7 @@ void FFMODAudioLinkInputClient::Start(USceneComponent* InComponent)
                     InputClientRef* callbackMemory = new InputClientRef(SelfSP);
 
                     EventInst->setUserData(callbackMemory);
-
-                    bool bIs3d = 0;
-                    EventDesc->is3D(&bIs3d);
-                    if (bIs3d)
-                    {
-                        // delay start
-                        SelfSP->bShouldDelayStart = true;
-                        UE_LOG(LogFMODAudioLink, Verbose, TEXT("FFMODAudioLinkInputClient::Start: Delaying start of 3D EventInstance."));
-                    }
-                    else
-                    {
-                        SelfSP->bShouldDelayStart = false;
-                        EventInst->start();
-                    }
+                    EventInst->start();
                 }
             }
         };
@@ -254,12 +241,6 @@ void FFMODAudioLinkInputClient::UpdateWorldState(const FWorldState& InParams)
         // TODO: velocity
 
         EventInstance->set3DAttributes(&attr);
-        if (bShouldDelayStart)
-        {
-            EventInstance->start();
-            UE_LOG(LogFMODAudioLink, Verbose, TEXT("FFMODAudioLinkInputClient::UpdateWorldState: Starting EventInstance."));
-            bShouldDelayStart = false;
-        }
     }
 }
 
