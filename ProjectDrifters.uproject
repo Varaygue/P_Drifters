@@ -26,10 +26,6 @@
 		{
 			"Name": "FMODStudioNiagara",
 			"Enabled": false
-		},
-		{
-			"Name": "GeometryScripting",
-			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
