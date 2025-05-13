@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated using SpeedTree tools -->
+<Materials Count="2" Mesh="BIO_VEG_Mushroom.fbx" FlipOpacity="0">
+	<Material ID="3" Name="Mushroom_Tan_Mat" TwoSided="0" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Mushroom_Tan.png" Source="D:/TAFF/Logiciel/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Mushroom/Bark/Mushroom_White.png" />
+		<Map Name="Normal" File="Mushroom_Tan_Normal.png" Source="D:/TAFF/Logiciel/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Mushroom/Bark/Mushroom_White_Normal.png" />
+		<Map Name="Gloss" File="Mushroom_Tan_Gloss.png" Source="D:/TAFF/Logiciel/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Mushroom/Bark/Mushroom_White_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="AO" File="Mushroom_Tan_AO.png" Source="D:/TAFF/Logiciel/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Mushroom/Bark/Mushroom_White_AO.png" />
+		<Map Name="Height" File="Mushroom_Tan_Height.png" Source="D:/TAFF/Logiciel/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Mushroom/Bark/Mushroom_White_VertexDisplacement.png" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+	<Material ID="2" Name="Mushroom_White_Mat" TwoSided="0" UserData="" VertexOpacity="1" FlipNormalsOnBackside="1">
+		<Map Name="Color" File="Mushroom_White.png" Source="D:/TAFF/Logiciel/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Mushroom/Bark/Mushroom_White.png" />
+		<Map Name="Normal" File="Mushroom_White_Normal.png" Source="D:/TAFF/Logiciel/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Mushroom/Bark/Mushroom_White_Normal.png" />
+		<Map Name="Gloss" File="Mushroom_White_Gloss.png" Source="D:/TAFF/Logiciel/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Mushroom/Bark/Mushroom_White_Gloss.png" />
+		<Map Name="Specular" ColorR="0.75" ColorG="0.75" ColorB="0.75" />
+		<Map Name="AO" File="Mushroom_White_AO.png" Source="D:/TAFF/Logiciel/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Mushroom/Bark/Mushroom_White_AO.png" />
+		<Map Name="Height" File="Mushroom_White_Height.png" Source="D:/TAFF/Logiciel/SPEEDTREE-20250111T180417Z-001/SPEEDTREE/SpeedTree Cinema v9.1.3/samples/Sample_Mushroom/Bark/Mushroom_White_VertexDisplacement.png" />
+		<Map Name="Custom" ColorR="0" ColorG="0" ColorB="0" />
+		<Map Name="Custom2" Value="0" />
+	</Material>
+</Materials>
